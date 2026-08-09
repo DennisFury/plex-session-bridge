@@ -4,7 +4,7 @@ Plex Infuse Bridge is a small Python service that makes Infuse playback on Apple
 TV appear to Plex Media Server as active Plex playback sessions.
 
 It is useful when you launch Infuse with deep links to direct Plex media URLs.
-Infuse can play the media, but Plex may not show an active session, update
+Infuse can play the media, but Plex will not show an active session, update
 resume position, or expose playback to tools that depend on Plex sessions. This
 bridge fills that gap by observing Apple TV playback and sending Plex timeline
 updates with a stable synthetic Plex client identity.
