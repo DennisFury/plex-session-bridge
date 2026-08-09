@@ -68,7 +68,7 @@ other Apple TV apps from being reported to Plex.
 - Python 3.11+
 - Plex Media Server reachable from the bridge host
 - A Plex token for the user whose playback/history should be updated
-- Apple TV devices with Infuse installed
+- Apple TV devices with Infuse 8.4.7+ installed
 - Working pyatv/`atvremote` access to every Apple TV
 
 This bridge uses [`pyatv`](https://github.com/postlund/pyatv), specifically the
