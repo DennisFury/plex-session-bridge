@@ -1,0 +1,17 @@
+[Unit]
+Description=Plex Infuse Bridge
+After=default.target
+
+[Service]
+Type=simple
+WorkingDirectory=%h/plex-infuse-bridge
+Environment=LOG_LEVEL=WARNING
+EnvironmentFile=%h/.config/plex-infuse-bridge/env
+ExecStart=%h/plex-infuse-bridge/.venv/bin/python -m uvicorn app.main:app --host 127.0.0.1 --port 8097 --log-level warning --no-access-log
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGINT
+TimeoutStopSec=20
+
+[Install]
+WantedBy=default.target

@@ -1,0 +1,45 @@
+[project]
+name = "plex-infuse-bridge"
+version = "0.1.0"
+description = "Report Infuse playback on Apple TV to Plex as synthetic playback sessions."
+readme = "README.md"
+requires-python = ">=3.11"
+license = "MIT"
+authors = [
+  { name = "Plex Infuse Bridge contributors" }
+]
+keywords = ["plex", "infuse", "apple-tv", "pyatv", "tautulli"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Framework :: FastAPI",
+  "Intended Audience :: End Users/Desktop",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Home Automation",
+  "Topic :: Multimedia :: Video",
+]
+dependencies = [
+  "requests>=2.31",
+  "plexapi>=4.15",
+  "PyYAML>=6.0",
+  "fastapi>=0.110",
+  "uvicorn>=0.29",
+  "pyatv>=0.14",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/DennisFury/plex-session-bridge"
+Issues = "https://github.com/DennisFury/plex-session-bridge/issues"
+
+[project.scripts]
+plex-infuse-bridge = "app.main:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

@@ -1,0 +1,33 @@
+plex:
+  url: "http://plex.example.test:32400"
+  token_env: "PLEX_TOKEN"
+
+server:
+  host: "127.0.0.1"
+  port: 8097
+
+poll_interval_s: 5
+max_poll_failures: 5
+max_concurrent_devices: 2
+
+devices:
+  media_room:
+    name: "Media Room"
+    ip: "192.0.2.21"
+    mac_address: "A1B2C3D4E5F6"
+    plex_user: "plex-user"
+    synthetic_client_id: "infuse-bridge-media-room"
+
+  bedroom:
+    name: "Bedroom"
+    ip: "192.0.2.22"
+    mac_address: "B2C3D4E5F6A1"
+    plex_user: "plex-user"
+    synthetic_client_id: "infuse-bridge-bedroom"
+
+  office:
+    name: "Office"
+    ip: "192.0.2.23"
+    mac_address: "C3D4E5F6A1B2"
+    plex_user: "plex-user"
+    synthetic_client_id: "infuse-bridge-office"
